@@ -3,6 +3,7 @@ using System;
 using Collection.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Collection.Migrations
 {
     [DbContext(typeof(CollectionContext))]
-    partial class CollectionContextModelSnapshot : ModelSnapshot
+    [Migration("20220812181508_ChangesToGenre")]
+    partial class ChangesToGenre
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
@@ -27,7 +29,7 @@ namespace Collection.Migrations
                         .IsRequired()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("GenreList")
+                    b.Property<int?>("Genre")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("PubYear")

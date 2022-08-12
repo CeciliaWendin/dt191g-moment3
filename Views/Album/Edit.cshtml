@@ -29,6 +29,11 @@
                 <span asp-validation-for="PubYear" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="GenreList" class="control-label"></label>
+                <input asp-for="GenreList" class="form-control" />
+                <span asp-validation-for="GenreList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

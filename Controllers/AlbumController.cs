@@ -57,7 +57,7 @@ namespace Collection.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ArtistId,PubYear")] Album album)
+        public async Task<IActionResult> Create([Bind("Id,Title,ArtistId,PubYear,GenreList")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace Collection.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ArtistId,PubYear")] Album album)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ArtistId,PubYear,GenreList")] Album album)
         {
             if (id != album.Id)
             {

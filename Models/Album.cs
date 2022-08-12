@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Collection.Enums;
 
 namespace Collection.Data.Entities
 {
@@ -14,5 +15,7 @@ namespace Collection.Data.Entities
         public Artist? Artist { get; set; }
         [Display(Name = "Publicerad")]
         public int? PubYear { get; set; }
+        [Display(Name = "Genre")]
+        public GenreList? GenreList { get; set; }
    }
 }
